@@ -10,7 +10,7 @@ const options : CreateDataProviderOptions = {
       const pageSize = pagination?.pageSize ?? 10;
 
 
-      const params: Record<string, string|number> = { page, limit: pageSize}
+      const params: Record<string, string|number> = { page, limit: pageSize};
 
       filters?.forEach((filter) => {
         const field = 'field' in filter ? filter.field : '';
@@ -39,6 +39,6 @@ const options : CreateDataProviderOptions = {
   }
 }
 
-const { dataProvider } = createDataProvider(BACKEND_BASE_URL, options)
+const { dataProvider } = createDataProvider(BACKEND_BASE_URL, options);
 
 export { dataProvider };
